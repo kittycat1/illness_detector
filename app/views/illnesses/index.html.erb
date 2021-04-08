@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= form_tag(illnesses_path, method: :get) do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
+<% if @illnesses %>
+  <h1>Illnesses matching '<%= params[:search] %>'</h1>
+
+  <% @illnesses.each do |illness| %>
+      <div>
+        <h3><%= link_to(illness.name, illness)%></h3>
+        <p><%= illness.symptoms %>
+      </div>
+  <% end %>
+<% end %>

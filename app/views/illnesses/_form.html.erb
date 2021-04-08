@@ -1,0 +1,32 @@
+<%= form_with(model: illness) do |form| %>
+  <% if illness.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(illness.errors.count, "error") %> prohibited this illness from being saved:</h2>
+
+      <ul>
+        <% illness.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :symptoms %>
+    <%= form.text_area :symptoms %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
