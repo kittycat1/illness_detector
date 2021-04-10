@@ -1,5 +1,5 @@
 class IllnessesController < ApplicationController
-  SECTIONS = ["Symptoms", "Prevention", "Causes", "Overview", "Type", "Complications", "Risk factors"]
+  SECTIONS = ["Symptoms", "Prevention", "Causes", "Overview", "Type", "Complications", "Risk factors", "When to see a doctor"]
   before_action :set_illness, only: %i[ show edit update destroy ]
 
   # GET /illnesses or /illnesses.json
