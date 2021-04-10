@@ -2,6 +2,8 @@
 
 The site can be accessed at https://illness-dective.herokuapp.com/
 
+View the architecture [presentation deck](https://github.com/kittycat1/illness_detector/files/6289280/Illness.Detective.pdf)
+
 ### Home page
 ![image](https://user-images.githubusercontent.com/38593727/114256537-c7a71400-996e-11eb-87f3-4c204ce0c959.png)
 
