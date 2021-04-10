@@ -70,7 +70,7 @@ class IllnessesController < ApplicationController
 
     def prepare_content
       content = @illness.content.gsub("\r", "").split("\n").map(&:presence).compact.map do |line|
-        if %w(Symptoms Prevention Causes).include?(line)
+        if %w(Symptoms Prevention Causes Overview Type).include?(line)
           "<h3>#{line}</h3>"
         else
           "<p>#{line}</p>"
