@@ -1,4 +1,5 @@
 class IllnessesController < ApplicationController
+  SECTIONS = ["Symptoms", "Prevention", "Causes", "Overview", "Type", "Complications", "Risk factors"]
   before_action :set_illness, only: %i[ show edit update destroy ]
 
   # GET /illnesses or /illnesses.json
@@ -70,7 +71,7 @@ class IllnessesController < ApplicationController
 
     def prepare_content
       content = @illness.content.gsub("\r", "").split("\n").map(&:presence).compact.map do |line|
-        if %w(Symptoms Prevention Causes Overview Type).include?(line)
+        if SECTIONS.include?(line)
           "<h3>#{line}</h3>"
         else
           "<p>#{line}</p>"

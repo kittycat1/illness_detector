@@ -53,8 +53,24 @@ body {
 .illness-details h3 {
   margin-top: 20px;
   margin-bottom: 10px;
+  font-size: 1.5em;
 }
 
 .illness-details h3 + p {
   margin-top: 10px;
+}
+
+.illness-form .large-text-field {
+  width: 80%;
+  height: 30px;
+}
+
+.illness-form .small-text-area {
+  width: 80%;
+  height: 50px;
+}
+
+.illness-form .large-text-area {
+  width: 80%;
+  height: 150px;
 }

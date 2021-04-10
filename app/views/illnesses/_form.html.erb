@@ -1,3 +1,4 @@
+<div class="illness-form">
 <%= form_with(model: illness) do |form| %>
   <% if illness.errors.any? %>
     <div id="error_explanation">
@@ -13,20 +14,21 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: 'large-text-field' %>
   </div>
 
   <div class="field">
     <%= form.label :symptoms %>
-    <%= form.text_area :symptoms %>
+    <%= form.text_area :symptoms, class: 'small-text-area' %>
   </div>
 
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content, class: 'large-text-area' %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+</div>
