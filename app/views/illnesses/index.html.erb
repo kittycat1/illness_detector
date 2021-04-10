@@ -16,11 +16,15 @@
 <% end %>
 
 <% if @illnesses %>
-  <h1>Illnesses matching '<%= params[:search] %>'</h1>
-  <% @illnesses.each do |illness| %>
-      <div class="search-results">
-        <h3 class="result-title"><%= link_to(illness.name, illness)%></h3>
-        <p class="result-symptoms"><%= illness.symptoms %>
-      </div>
+  <% if @illnesses.present? %>
+    <h1>Illnesses matching '<%= params[:search] %>'</h1>
+    <% @illnesses.each do |illness| %>
+        <div class="search-results">
+          <h3 class="result-title"><%= link_to(illness.name, illness)%></h3>
+          <p class="result-symptoms"><%= illness.symptoms %>
+        </div>
+    <% end %>
+  <% else %>
+    <h1>No illnesses matching '<%= params[:search] %>' found!</h1>
   <% end %>
 <% end %>
