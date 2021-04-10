@@ -4,7 +4,7 @@ class IllnessesController < ApplicationController
 
   # GET /illnesses or /illnesses.json
   def index
-    @illnesses = Illness.search_by_symptoms(params[:search]) if params[:search]
+    @illnesses = Illness.search_by_symptoms(params[:search]).limit(5) if params[:search]
   end
 
   # GET /illnesses/1 or /illnesses/1.json

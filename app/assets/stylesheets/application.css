@@ -43,6 +43,7 @@ body {
   height:50px;
   width: 80%;
   font-size: 1.5em;
+  margin-bottom: 30px;
 }
 
 .search_submit_button {
@@ -73,4 +74,17 @@ body {
 .illness-form .large-text-area {
   width: 80%;
   height: 150px;
+}
+
+.search-results .result-title {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.search-results .result-title a {
+  text-decoration: none;
+}
+
+.search-results .result-symptoms {
+  margin-top: 5px;
 }

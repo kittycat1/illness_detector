@@ -9,6 +9,7 @@
 </p>
 <% end %>
 
+
 <%= form_tag(illnesses_path, method: :get) do %>
   <%= text_field_tag :search, params[:search], placeholder: 'Enter your symptoms here', class: 'search_field' %>
   <%= submit_tag 'Search', class: 'search_submit_button' %>
@@ -16,11 +17,10 @@
 
 <% if @illnesses %>
   <h1>Illnesses matching '<%= params[:search] %>'</h1>
-
   <% @illnesses.each do |illness| %>
-      <div>
-        <h3><%= link_to(illness.name, illness)%></h3>
-        <p><%= illness.symptoms %>
+      <div class="search-results">
+        <h3 class="result-title"><%= link_to(illness.name, illness)%></h3>
+        <p class="result-symptoms"><%= illness.symptoms %>
       </div>
   <% end %>
 <% end %>
