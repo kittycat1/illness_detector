@@ -8,6 +8,7 @@ class IllnessesController < ApplicationController
 
   # GET /illnesses/1 or /illnesses/1.json
   def show
+    prepare_content
   end
 
   # GET /illnesses/new
@@ -65,5 +66,16 @@ class IllnessesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def illness_params
       params.require(:illness).permit(:name, :content, :symptoms)
+    end
+
+    def prepare_content
+      content = @illness.content.gsub("\r", "").split("\n").map(&:presence).compact.map do |line|
+        if %w(Symptoms Prevention Causes).include?(line)
+          "<h3>#{line}</h3>"
+        else
+          "<p>#{line}</p>"
+        end
+      end.join
+      @illness.content = content
     end
 end

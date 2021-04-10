@@ -13,3 +13,48 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  margin-top: 0;
+  background-color: #eff4f5;
+  font-family: 'Merriweather', serif;
+}
+
+.logo {
+  text-decoration: none;
+  display: contents;
+}
+
+.welcome {
+  font-size: 2em;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  word-spacing: 2px;
+  color: #888;
+  margin-top: 10px;
+}
+
+.welcome .company {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.search_field {
+  height:50px;
+  width: 80%;
+  font-size: 1.5em;
+}
+
+.search_submit_button {
+  height: 50px;
+  width: 15%;
+}
+
+.illness-details h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.illness-details h3 + p {
+  margin-top: 10px;
+}

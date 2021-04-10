@@ -2,12 +2,6 @@
 
 <h1><%= @illness.name %></h1>
 
-<h3>Symptoms</h3
-<p>
-  <%= @illness.symptoms %>
-</p>
-
-<h3>Description</h3
-<p>
-  <%= @illness.content %>
-</p>
+<div class='illness-details'>
+  <%= @illness.content.html_safe %>
+</div>
