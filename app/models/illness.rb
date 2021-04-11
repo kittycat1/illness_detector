@@ -5,5 +5,5 @@ class Illness < ApplicationRecord
                     tsearch: {any_word: true}
                   }
 
-                  pg_search_scope :search_by_symptoms, against: :symptoms
+  pg_search_scope :search_by_symptoms, against: :symptoms
 end
