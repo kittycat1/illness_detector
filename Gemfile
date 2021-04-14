@@ -56,3 +56,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pg_search'
+
+gem 'devise'
+
+gem "letter_opener", :group => :development
