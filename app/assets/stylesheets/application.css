@@ -25,6 +25,10 @@ body {
   display: contents;
 }
 
+.profile {
+  float: right;
+}
+
 .welcome {
   font-size: 2em;
   letter-spacing: 1px;
@@ -87,4 +91,14 @@ body {
 
 .search-results .result-symptoms {
   margin-top: 5px;
+}
+
+ul.hmenu {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+ul.hmenu li {
+  display: inline;
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>Illiness Detector</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -14,10 +15,19 @@
   </head>
 
   <body>
-    <div>
+    <div class="header">
       <a class="logo" href="/">
         <img src="/logo.svg" height="87" width="220" />
       </a>
+      <span class="profile">
+        <% if user_signed_in? %>
+          <span> <%= current_user.email %> </span>
+        <% end %>
+        <ul class="hmenu">
+          <%= render 'devise/menu/registration_items' %>
+          <%= render 'devise/menu/login_items' %>
+        </ul>
+      </span>
     </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p
