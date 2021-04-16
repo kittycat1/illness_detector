@@ -21,7 +21,7 @@
       </a>
       <span class="profile">
         <% if user_signed_in? %>
-          <span> <%= current_user.email %> </span>
+          <span> <%= current_user.name %> </span>
         <% end %>
         <ul class="hmenu">
           <%= render 'devise/menu/registration_items' %>
